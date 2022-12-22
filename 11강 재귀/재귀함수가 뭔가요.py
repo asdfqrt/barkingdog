@@ -1,0 +1,24 @@
+con0 = "어느 한 컴퓨터공학과 학생이 유명한 교수님을 찾아가 물었다."
+con1 = "\"재귀함수가 뭔가요?\"\n"
+con2 = "\"잘 들어보게. 옛날옛날 한 산 꼭대기에 이세상 모든 지식을 통달한 선인이 있었어.\n"
+con3 = "마을 사람들은 모두 그 선인에게 수많은 질문을 했고, 모두 지혜롭게 대답해 주었지.\n"
+con4 = "그의 답은 대부분 옳았다고 하네. 그런데 어느 날, 그 선인에게 한 선비가 찾아와서 물었어.\"\n"
+con5 = "\"재귀함수가 뭔가요?\"\n"
+con6 = "\"재귀함수는 자기 자신을 호출하는 함수라네\"\n"
+conf = "라고 답변하였지.\n"
+
+
+
+
+
+def chatbot(n,con1,con2,con3,con4,con5,con6,conf):
+    bar = "____"
+    if n==0:
+        return con5+con6+conf
+    return con1+con2+con3+con4+chatbot(n-1,bar+con1,bar+con2,bar+con3,bar+con4,bar+con5,bar+con6,bar+conf)+conf
+
+n = int(input())
+print(con0)
+print(chatbot(n,con1,con2,con3,con4,con5,con6,conf))
+
+
