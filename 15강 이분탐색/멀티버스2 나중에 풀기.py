@@ -13,8 +13,6 @@ for i in range(n):
 for w in arr[1]:
     print(C[w])
 
-
-image.png
 # A=list(map(int,input().split()))
 # B=list(set(A))
 # B.sort()
